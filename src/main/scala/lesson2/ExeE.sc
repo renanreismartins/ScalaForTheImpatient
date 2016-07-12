@@ -10,3 +10,19 @@ def rVowels(s: String, acc: String): String = {
 }
 
 rVowels("aeiovvvu", "")
+
+
+
+
+
+def rVowels2(s: String): String = {
+  if (s.isEmpty) return "";
+
+  if ("aeiou".contains(s.head)) {
+    return s.head + rVowels2(s.tail);
+  } else {
+    return rVowels2(s.tail);
+  }
+
+}
+rVowels2("aeiovvvu")
