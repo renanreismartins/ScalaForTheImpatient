@@ -1,5 +1,5 @@
 pipeline {
-    agent { docker { image 'bigtruedata/scala:2.12.2' } }
+    agent { docker { image 'bigtruedata/sbt' } }
     stages {
         stage('build') {
             steps {
